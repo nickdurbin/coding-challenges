@@ -13,3 +13,17 @@ let smash = words.join(' ');
 // }
 
 console.log(smash); // returns "hello world this is great
+
+class Sentence {
+	constructor(arr) {
+		this.arr = arr;
+	}
+	
+	smash() {
+		return this.arr.join(' ');
+	}
+}
+
+const words = new Sentence(['hello', 'world', 'this', 'is', 'great']);
+
+console.log(words.smash());
