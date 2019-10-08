@@ -6,10 +6,29 @@ function noSpace(x){
   
 }
 
-// Solution
+// Solution I wrote
 function noSpace(x){
   let strArray = x.split(' ').join('')
   return strArray
+}
+
+// Alternate solution with Regex
+function noSpace(x){
+  return x.replace(/\s/g, '');
+}
+
+// Solution with arrow function
+const noSpace = x => x.replace(/ /g, "");
+
+// Longer solution
+function noSpace(x){
+  var result = ""
+  for(var index = 0; index < x.length; index++){
+    if(x[index] !== " "){
+      result += x[index];
+    }
+  }
+  return result;
 }
 
 // Test
